@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <title>Hello World!</title>
+    </head>
+    <body>
+        <h1>Hello world!</h1>
+        <a href="employee/add">Add Employee</a> <br>
+        <a href="employee/getAll">list Employee</a> <br>
+        <label>Enter Employee Id</label>
+        <input type=text #inp>
+        <a href="employee/getEmpById/"+inp.value>Get Employee by Id</a>
+    </body>
+</html>

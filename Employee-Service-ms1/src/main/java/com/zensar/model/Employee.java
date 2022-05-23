@@ -1,57 +1,61 @@
 package com.zensar.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name="Employee1")
 public class Employee {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	private String name;
+	private double salary;
+	private int experience;
+	private String departmentName;
 	
-	private String Id;
-	private String firstname;
-	private String lastname;
-	private String specialty;
 	
-	public Employee() {
-		
+	public int getId() {
+		return id;
 	}
-
-	public Employee(String id, String firstname, String lastname, String specialty) {
-	
-		Id = id;
-		this.firstname = firstname;
-		this.lastname = lastname;
-		this.specialty = specialty;
+	public void setId(int id) {
+		this.id = id;
 	}
-
-	public String getId() {
-		return Id;
+	public String getName() {
+		return name;
 	}
-
-	public void setId(String id) {
-		Id = id;
+	public void setName(String name) {
+		this.name = name;
 	}
-
-	public String getFirstname() {
-		return firstname;
+	public double getSalary() {
+		return salary;
 	}
-
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
+	public void setSalary(double salary) {
+		this.salary = salary;
 	}
-
-	public String getLastname() {
-		return lastname;
+	public int getexperience() {
+		return experience;
 	}
-
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
-	}
-
-	public String getSpecialty() {
-		return specialty;
-	}
-
-	public void setSpecialty(String specialty) {
-		this.specialty = specialty;
+	public void setexperience(int experience) {
+		this.experience = experience;
 	}
 	
 	
-
+	public String getDepartmentName() {
+		return departmentName;
+	}
+	public void setDepartmentName(String departmentName) {
+		this.departmentName = departmentName;
+	}
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary + ", experience=" + experience
+				+ ", departmentName=" + departmentName + "]";
+	}
+	
+	
 }
